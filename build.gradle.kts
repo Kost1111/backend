@@ -1,7 +1,8 @@
-
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
+    alias(libs.plugins.kapt)
+    alias(libs.plugins.serialization.kotlin)
 }
 
 group = "ru.local"
@@ -26,4 +27,6 @@ dependencies {
     implementation(libs.logback.classic)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+    implementation(libs.serialization)
+    implementation(libs.ktor.serialization)
 }
